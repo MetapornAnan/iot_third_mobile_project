@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iot_third_mobile_project/views/login_ui.dart';
+import 'package:iot_third_mobile_project/views/signup_ui.dart';
 import 'package:iot_third_mobile_project/views/welcome_ui.dart';
 
 void main(){
@@ -21,7 +22,7 @@ class _IoTTHIRDMOBILEState extends State<IoTTHIRDMOBILE> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: WelcomeUI(), //เรียกใช้ Class ที่เรียกใช้งาน Widget หลักของแอปฯ
+      home: SignupUI(), //เรียกใช้ Class ที่เรียกใช้งาน Widget หลักของแอปฯ
     );
   }
 }
