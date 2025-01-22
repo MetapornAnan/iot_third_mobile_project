@@ -1,6 +1,8 @@
 // ignore_for_file: sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:iot_third_mobile_project/views/login_ui.dart';
+import 'package:iot_third_mobile_project/views/signup_ui.dart';
 
 class WelcomeUI extends StatefulWidget {
   const WelcomeUI({super.key});
@@ -48,7 +50,15 @@ class _WelcomeUIState extends State<WelcomeUI> {
                   .center, //การเขยิบสิ่งที่อยู่ใน Row อยู่ตรงกลาง
               children: [
                 OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    //เปิดหน้าจอแบบย้อนกลับได้
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LoginUI(),
+                      ),
+                    );
+                  },
                   child: Text(
                     'LOGIN',
                     style: TextStyle(
@@ -68,7 +78,14 @@ class _WelcomeUIState extends State<WelcomeUI> {
                   width: MediaQuery.of(context).size.width * 0.035,
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SignupUI(),
+                      ),
+                    );
+                  },
                   child: Text(
                     'SIGNUP',
                     style: TextStyle(
